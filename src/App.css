@@ -40,3 +40,34 @@
 .read-the-docs {
   color: #888;
 }
+
+/* Mobile responsive tweaks */
+@media (max-width: 640px) {
+  #root {
+    padding: 1.25rem 0.9rem 2.5rem;
+  }
+  h1 {
+    font-size: 1.9rem;
+    line-height: 1.15;
+    margin-bottom: 0.75rem;
+  }
+  .controls-row {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 8px !important;
+  }
+  .controls-row label,
+  .controls-row > div,
+  .controls-row button {
+    width: 100%;
+  }
+  .controls-row select,
+  .controls-row button {
+    font-size: 16px; /* avoid iOS zoom */
+  }
+}
+
+/* Slightly larger touch targets for very narrow devices */
+@media (max-width: 380px) {
+  h1 { font-size: 1.6rem; }
+}

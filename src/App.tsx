@@ -1,33 +1,14 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import BilliardsAim from './BilliardsAim'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
+      <h1>Tool Ngắm Góc Bida</h1>
+      <p style={{ maxWidth: 760, margin: '0 auto 1rem', fontSize: 14 }}>
+        Kéo bi trắng, bi đỏ hoặc chọn lỗ để xem góc cắt. Chuyển chế độ qua chọn "Một băng" để tập đường băng phản xạ.
       </p>
+      <BilliardsAim />
     </>
   )
 }
